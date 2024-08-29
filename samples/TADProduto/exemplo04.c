@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <string.h>
 // Função altera_preco
 // Desc: modifica o preço de um *produto*
 // Entrada:
