@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// PS: Por algum motivo depois de conferir o codigo, não consegui rodar, mas pelo terminal consegui kkk
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -36,7 +38,27 @@ public class Main {
         for (Produto produto : produtos) {
             System.out.printf("\nProduto: %s\nPreco: %.2f\nEstoque: %d\n", produto.nome, produto.preco, produto.qtdEstoque);
         }
+    }
+}
 
-        scanner.close();
+class Produto {
+    String nome;
+    float preco;
+    int qtdEstoque;
+
+    Produto(String nome, float preco, int qtdEstoque) {
+        this.nome = nome;
+        this.preco = preco;
+        this.qtdEstoque = qtdEstoque;
+    }
+
+    int alteraPreco(float porcentagem) {
+        if (porcentagem > -100) {
+            float temp = 1 + porcentagem / 100; // Ex: 10 => 1 + 10/100 = 1.1; -5 => 1 + (-5/100) = 0.95
+            preco *= temp;
+            return 0;
+        } else {
+            return -1;
+        }
     }
 }

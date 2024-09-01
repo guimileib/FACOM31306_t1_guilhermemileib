@@ -53,13 +53,13 @@ public class principal {
     public static void ex03() {
 
         int[] valores = new int[6];
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("<<Listando um vetor em ordem inversa>>");
         int i = 0;
         do {
             System.out.println("Digite o " +(i + 1)+"º valor:");
-            valores[i] = scanner.nextInt();
+            valores[i] = sc.nextInt();
             i++;
         }while(i < 6);
 
@@ -75,7 +75,7 @@ public class principal {
 
     public static void ex04(){
         int[] valores = new int[6];
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.printf("<<Listando um vetor de números pares>>%n");
 
@@ -83,7 +83,7 @@ public class principal {
 
         while (i < 6) {
             System.out.printf("Entre com o número %dº: ", i + 1);
-            int numero = scanner.nextInt();
+            int numero = sc.nextInt();
 
             if (numero % 2 == 0) {
                 valores[i] = numero;
@@ -101,13 +101,13 @@ public class principal {
 
     public static void ex05(){
         int[] valores = new int[5];
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         
         System.out.println("<<5 valores>>");
 
         for(int i = 0; i < 5; i++){
             System.out.printf("Entre com número o %dº: %n", i + 1);
-            valores[i] = scanner.nextInt();
+            valores[i] = sc.nextInt();
         }
 
         System.out.printf("Os números digitados são:");
@@ -145,13 +145,13 @@ public class principal {
 
     public static void ex06(){
         int[] valores = new int[5];
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         
         System.out.println("<<5 valores>>");
 
         for(int i = 0; i < 5; i++){
             System.out.printf("Entre com número o %dº: %n", i + 1);
-            valores[i] = scanner.nextInt();
+            valores[i] = sc.nextInt();
         }
 
         System.out.printf("Os números digitados são:");
@@ -193,14 +193,14 @@ public class principal {
     }
 
     public static void ex07(){
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int[] notas = new int[5];
         int maiorNota = 0;
 
         System.out.println("<<Normalizando as notas>>");
         for (int i = 0; i < 5; i++) {
             System.out.print("Entre com a nota do aluno " + (i + 1) + ": ");
-            notas[i] = scanner.nextInt();
+            notas[i] = sc.nextInt();
 
             if (notas[i] > maiorNota) {
                 maiorNota = notas[i];
@@ -215,13 +215,13 @@ public class principal {
     }
 
     public static void ex08(){
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         double[] numeros = new double[5];
         double soma = 0;
         
         for (int i = 0; i < 5; i++) {
             System.out.print("Informe o número " + (i + 1) + ": ");
-            numeros[i] = scanner.nextDouble();
+            numeros[i] = sc.nextDouble();
             soma += numeros[i];
         }
 
@@ -240,10 +240,10 @@ public class principal {
     }
 
     public static void ex09(){
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite o número de alunos que você tem na turma: ");
-        int numAlunos = scanner.nextInt();
+        int numAlunos = sc.nextInt();
 
         if(numAlunos > 100){
             System.out.println("Você não pode criar uma turma com mais de 100 alunos.");
@@ -254,7 +254,7 @@ public class principal {
 
         for(int i = 0; i < numAlunos; i++){
             System.out.print("Informe a nota do aluno " + (i+1) +":");
-            notas[i] = scanner.nextDouble();
+            notas[i] = sc.nextDouble();
             soma+= notas[i];
         }
 
@@ -274,18 +274,18 @@ public class principal {
         int[] B = new int[3];
         int[] C = new int[3];
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("<<Subtração de vetores>>");
 
         for(int i = 0; i < 3; i++){
             System.out.print("Digite o valor de"+ (i+1) +" em A:");
-            A[i] = scanner.nextInt();
+            A[i] = sc.nextInt();
         }
 
         for(int i = 0; i < 3; i++){
             System.out.print("Digite o valor de"+ (i+1) +" em B:");
-            B[i] = scanner.nextInt();
+            B[i] = sc.nextInt();
         }
 
         for(int i = 0; i < 3; i++){
@@ -304,7 +304,7 @@ public class principal {
     }
 
     public static void ex011(){
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         
         int[] v = new int[5];
         int[] v1 = new int[5]; 
@@ -314,7 +314,7 @@ public class principal {
 
         for (int i = 0; i < 5; i++) {
             System.out.print("Digite o valor " + (i + 1) + ": ");
-            v[i] = scanner.nextInt();
+            v[i] = sc.nextInt();
             
             if (v[i] % 2 == 0) {
                 v2[v2Index] = v[i];
@@ -343,21 +343,21 @@ public class principal {
     }
 
     public static void ex012(){
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Calculando a Probabilidade:");
 
         System.out.print("Digite a quantidade de bolinhas\nVerde: ");
-        int verde = scanner.nextInt();
+        int verde = sc.nextInt();
         
         System.out.print("Azul: ");
-        int azul = scanner.nextInt();
+        int azul = sc.nextInt();
         
         System.out.print("Amarela: ");
-        int amarela = scanner.nextInt();
+        int amarela = sc.nextInt();
         
         System.out.print("Vermelha: ");
-        int vermelha = scanner.nextInt();
+        int vermelha = sc.nextInt();
 
         int totalBolinhas = verde + azul + amarela + vermelha;
         
@@ -386,13 +386,13 @@ public class principal {
     }
 
     public static void ex013(){
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         
         int[] vetor = new int[5];
 
         for (int i = 0; i < 5; i++) {
             System.out.print("Entre com o número " + (i + 1) + ": ");
-            vetor[i] = scanner.nextInt();
+            vetor[i] = sc.nextInt();
         }
         
         for (int i = 0; i < 5; i++) {
@@ -408,17 +408,17 @@ public class principal {
     }
 
     public static void ex014(){
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         final int MAX_ALUNOS = 10000;
         
         System.out.println("====== Universidade Federal de Uberlândia ======");
         System.out.print("Quantos alunos serão cadastrados: ");
-        int numAlunos = scanner.nextInt();
-        scanner.nextLine(); 
+        int numAlunos = sc.nextInt();
+        sc.nextLine(); 
         
         if (numAlunos > MAX_ALUNOS) {
             System.out.println("Número de alunos excede o limite permitido.");
-            scanner.close();
+            sc.close();
             return;
         }
         
@@ -428,15 +428,15 @@ public class principal {
 
         for (int i = 0; i < numAlunos; i++) {
             System.out.print("\nEntre com o número do aluno: ");
-            matricula[i] = scanner.nextInt();
-            scanner.nextLine(); 
+            matricula[i] = sc.nextInt();
+            sc.nextLine(); 
             
             System.out.print("Entre com a classe social do aluno " + matricula[i] + ": ");
-            classeSocial[i] = scanner.nextLine().charAt(0);
+            classeSocial[i] = sc.nextLine().charAt(0);
             
             System.out.print("Entre com o CRA do aluno " + matricula[i] + ": ");
-            cra[i] = scanner.nextDouble();
-            scanner.nextLine(); 
+            cra[i] = sc.nextDouble();
+            sc.nextLine(); 
         }
         
         System.out.println("\n==== Alunos Cadastrados ====");
@@ -447,7 +447,7 @@ public class principal {
     }
 
     public static void ex015(){
-         Scanner scanner = new Scanner(System.in);
+         Scanner sc = new Scanner(System.in);
         
         final int TAMANHO_VETOR = 8;
         int[] vetor = new int[TAMANHO_VETOR];
@@ -456,7 +456,7 @@ public class principal {
         
         for (int i = 0; i < TAMANHO_VETOR; i++) {
             System.out.print("Entre com o número " + (i + 1) + ": ");
-            vetor[i] = scanner.nextInt();
+            vetor[i] = sc.nextInt();
         }
         
         for (int valor : vetor) {
@@ -484,7 +484,7 @@ public class principal {
     }
     
     public static void ex016(){
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         
         final int TAMANHO_VETOR = 8;
         int[] vetor = new int[TAMANHO_VETOR];
@@ -492,7 +492,7 @@ public class principal {
         
         for (int i = 0; i < TAMANHO_VETOR; i++) {
             System.out.print("Entre com o número " + (i + 1) + ": ");
-            vetor[i] = scanner.nextInt();
+            vetor[i] = sc.nextInt();
         }
 
 
@@ -513,21 +513,21 @@ public class principal {
     }
 
     public static void main(String[] args) {
-        // ex01();
+        //ex01();
         ex02();
-        ex03();
-        ex04();
-        ex05();
-        ex06();
-        ex07();
-        ex08();
-        ex09();
-        ex010();
-        ex011();
-        ex013();
-        ex014();
-        ex015();
-        ex016();
+        //ex03();
+        //ex04();
+        //ex05();
+        //ex06();
+        //ex07();
+        //ex08();
+        //ex09();
+        //ex010();
+        //ex011();
+        //ex013();
+        //ex014();
+        //ex015();
+        //ex016();
     }
 
 
