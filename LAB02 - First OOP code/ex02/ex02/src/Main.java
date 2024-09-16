@@ -1,16 +1,19 @@
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Candidato c1 = new Candidato("JUNINHO PROFESSOR", "03/06/1974",  "Masculino", "80.000,00", false, 55, "Prefeito");
-        Candidato c2 = new Candidato("PABLO HENRIQUE COSTA MARÇAL", "18/04/1987", "Cisgênero",  "169.503.058,17", false, 28, "Prefeito");
-        Candidato c3 = new Candidato("GLEIDSON GONTIJO AZEVEDO", "15/04/1982", "Masculino", "743.894,96", true, 30, "Prefeito");
-        
-        System.out.println("<< Informações sobre os candidatos: >>");
-        c1.setNomeCompleto("Baianinho de Mauá");
-        c2.setDataNascimento("18/09/2025");
-        c1.mostrarInformações();
-        c2.mostrarInformações();
+        Candidato candidato1 = new Candidato();
+        Candidato candidato2 = new Candidato();
+        Candidato candidato3 = new Candidato();
 
-    }        
+        // Alterar informações dos candidatos usando o método alterarInformacoes
+        candidato1.alterarInformacoes("João Silva", "01/01/1970", "Masculino", "500000", true, 15, "Prefeito");
+        candidato2.alterarInformacoes("Maria Souza", "15/06/1980", "Feminino", "300000", false, 22, "Vereadora");
+        candidato3.alterarInformacoes("Carlos Oliveira", "23/09/1975", "Masculino", "1000000", true, 35, "Prefeito");
+
+        // Exibir informações dos candidatos
+        candidato1.mostrarInformacoes();
+        candidato2.mostrarInformacoes();
+        candidato3.mostrarInformacoes();
+    }
 }
 
