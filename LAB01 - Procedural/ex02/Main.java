@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+// Ps: corrigi o codigo, estava chamando o construtor sem os parâmetros
 public class Main {
     public static void main(String[] args) {
         Produto[] produtos = new Produto[4];

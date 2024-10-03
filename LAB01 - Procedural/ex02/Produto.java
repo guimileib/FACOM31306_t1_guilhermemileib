@@ -11,7 +11,7 @@ public class Produto {
 
     public int alteraPreco(float porcentagem) {
         if (porcentagem > -100) {
-            float temp = 1 + porcentagem / 100; // Ex: 10 => 1 + 10/100 = 1.1; -5 => 1 + (-5/100) = 0.95
+            float temp = 1 + porcentagem / 100;                   
             preco *= temp;
             return 0;
         } else {
