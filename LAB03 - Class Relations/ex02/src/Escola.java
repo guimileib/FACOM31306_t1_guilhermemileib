@@ -1,11 +1,13 @@
-import java.util.ArrayList;
+
 
 public class Escola{
     private String nome;
     private Professor[] professores;
     private int contador;
 
-    public Escola(String nome){
+    public Escola(String nome, int tamanho){
+        professores = new Professor[tamanho];
+        contador = 0;
         this.nome = nome;
     }
 
@@ -19,6 +21,7 @@ public class Escola{
     }
 
     public void exibirEscola(){
+        System.out.println(" ");
         System.out.println("Escola: " + this.nome);
         System.out.println("Professores:");
         for(int i = 0; i < contador; i++){
