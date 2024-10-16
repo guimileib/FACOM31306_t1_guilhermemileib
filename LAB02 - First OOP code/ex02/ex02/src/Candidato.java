@@ -7,7 +7,7 @@ public class Candidato {
     private int nmrPartido;
     private String cargoPretendido;
 
-    public void alterarInformacoes(String nomeCompleto, String dataNascimento, String genero, String totalBens, boolean reeleger, int nmrPartido, String cargoPretendido) {
+    public void Candidato(String nomeCompleto, String dataNascimento, String genero, String totalBens, boolean reeleger, int nmrPartido, String cargoPretendido) {
         this.nomeCompleto = nomeCompleto;
         this.dataNascimento = dataNascimento;
         this.genero = genero;
