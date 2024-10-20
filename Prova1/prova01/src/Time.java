@@ -1,53 +1,93 @@
-public class Time {
-    private Jogador[] titulares;
+public class Time{
+    private Jogador titular1;
+    private Jogador titular2;
     private Jogador substituto;
-    private String nomeDoTime;
-    private int countTitulares;  
+    private String nomeTime;
 
-    
-    public Time(String nomeDoTime) {
-        this.nomeDoTime = nomeDoTime;
-        this.titulares = new Jogador[6];  
-        this.countTitulares = 0;
+    public Time(String nomeTime, Jogador titular1, Jogador titular2, Jogador substituto,
+                String nomeTitular,int idadeTitular, double alturaTitular, double pesoTitular, 
+                String nomeSubstituto, int idadeSubstituto, double alturaSubstituto, double pesoSubstituto){
+            this.nomeTime = nomeTime;
+            this.titular1 = new Jogador(nomeTitular, idadeTitular,alturaTitular, pesoTitular);
+            this.titular2 = new Jogador(nomeTitular, idadeTitular,alturaTitular, pesoTitular);
+            this.substituto = new Jogador(nomeSubstituto, idadeSubstituto, alturaSubstituto, pesoSubstituto);
+        
     }
 
-    public void adicionarTitular(Jogador jogador) {
-        if (countTitulares < 6) {
-            titulares[countTitulares] = jogador;
-            countTitulares++;
-        } else {
-            System.out.println("O time já tem 6 titulares.");
-        }
-    }
-
-    public void adicionarSubstituto(Jogador substituto) {
+    public Time(String nomeTime, Jogador titular1, Jogador titular2, Jogador substituto){
+        this.nomeTime = nomeTime;
+        this.titular1 = titular1;
+        this.titular2 = titular2;
         this.substituto = substituto;
     }
 
-    public void exibirInformacoes() {
-        System.out.println("Time: " + nomeDoTime);
-        System.out.println("Titulares:");
-        for (int i = 0; i < countTitulares; i++) {
-            titulares[i].exibirInformacoes();
-        }
-        if (substituto != null) {
-            System.out.println("Substituto:");
-            substituto.exibirInformacoes();
-        }
+
+    public Time(Jogador titular1, Jogador titular2, String nomeTitular,int idadeTitular, double alturaTitular, double pesoTitular){
+        this.titular1 = new Jogador(nomeTitular, idadeTitular,alturaTitular, pesoTitular);
+        this.titular1 = new Jogador(nomeTitular, idadeTitular,alturaTitular, pesoTitular);
     }
 
-    public double calcularMediaIdade() {
-        int somaIdades = 0;
-        int totalJogadores = countTitulares;
+    public String toString(){
+        return "Nome do Time: " + nomeTime +
+               "\nJogadores Titulares: " + titular1 + "\n" + titular2 +
+               "\nJogadores Substitutos: " + substituto;
+    }
 
-        for (int i = 0; i < countTitulares; i++) {
-            somaIdades += titulares[i].getIdade();
+    
+    public Jogador getTitular1() {
+        return titular1;
+    }
+
+    public void setTitular1(Jogador titular1) {
+        this.titular1 = titular1;
+    }
+
+    public Jogador getTitular2() {
+        return titular2;
+    }
+
+    public void setTitular2(Jogador titular2) {
+        this.titular2 = titular2;
+    }
+
+    public Jogador getSubstituto() {
+        return substituto;
+    }
+
+    public void setSubstituto(Jogador substituto) {
+        this.substituto = substituto;
+    }
+
+    public String getNomeTime() {
+        return nomeTime;
+    }
+
+    public void setNomeTime(String nomeTime) {
+        this.nomeTime = nomeTime;
+    }
+
+    public double calcIdadeMediaTime(){
+        int somaIdades = 0;
+        int totalJogadores = 0;
+        
+        if(titular1 != null){
+            somaIdades += titular1.getIdade();
+            totalJogadores++;
         }
-        if (substituto != null) {
+        if(titular2 != null){
+            somaIdades += titular2.getIdade();
+            totalJogadores++;
+        }
+        if(substituto != null){
             somaIdades += substituto.getIdade();
             totalJogadores++;
         }
 
-        return totalJogadores > 0 ? (double) somaIdades / totalJogadores : 0;
+        if(totalJogadores > 0){
+            return (double) somaIdades / totalJogadores;
+        }else{
+            return 0;
+        }
+
     }
 }

@@ -1,21 +1,52 @@
-public class Jogador {
+public class Jogador{
     private String nome;
     private int idade;
     private double altura;
     private double peso;
 
-    public Jogador(String nome, int idade, double altura, double peso) {
+    public Jogador(String nome, int idade, double altura, double peso){
         this.nome = nome;
         this.idade = idade;
         this.altura = altura;
         this.peso = peso;
     }
 
-    public void exibirInformacoes() {
-        System.out.println("Nome: " + nome + ", Idade: " + idade + ", Altura: " + altura + " metros, Peso: " + peso + " kg");
+    public String getNome(){
+        return nome;
     }
 
-    public int getIdade() {
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public int getIdade(){
         return idade;
+    }
+
+    public void setIdade(int idade){
+        this.idade = idade;
+    }
+
+    public double getAltura(){
+        return altura;
+    }
+
+    public void setAltura(double altura){
+        this.altura = altura;
+    }
+
+    public double getPeso(){
+        return peso;
+    }
+
+    public void setPeso(double peso){
+        this.peso = peso;
+    }
+   
+    public String toString(){
+        return "Nome: " + nome +
+               "\nIdade: " + idade +
+               "\nAltura: " + altura +
+               "\nPeso: " + peso;
     }
 }
