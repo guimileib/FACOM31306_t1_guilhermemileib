@@ -36,7 +36,7 @@ Teste de chamada de herança
 - A classe C1 é base da Classe C2, que por sua vez é base da Classe C3
 - Para cada classe, inclua um atributo público, protegido e privado (pode ser de qualquer tipo)
 - Para cada classe, construa um construtor padrão sem parâmetros e um construtor com parâmetros
-- Nos construtores de cada classe, inclua um comando que imprime uma mensagem indicando a passagem pelo contrutor. Por exemplo, para C1:
+- Nos construtores de cada classe, inclua um comando que imprime uma mensagem indicando a passagem pelo construtor. Por exemplo, para C1:
   "Classe C1: chamada do construtor padrao, sem parametros"
   "Classe C3: chamada do construtor com parametros"
 - Na classe C3 inclua um construtor que use o "super" para chamar o construtor da classe C2 com parâmetro
@@ -63,3 +63,4 @@ Crie uma classe {VIP}, que herda {Ingresso} e possui um valor adicional. Crie um
 Crie uma classe {Normal}, que herda {Ingresso} e possui um método que imprime: "Ingresso Normal".
 	
 Crie uma classe {CamaroteInferior} (que possui a localização do ingresso e métodos para acessar e imprimir esta localização) e uma classe {CamaroteSuperior}, que é mais cara (possui valor adicional). Esta última possui um método para retornar o valor do ingresso. Ambas as classes herdam a classe {VIP}.
+eeee
